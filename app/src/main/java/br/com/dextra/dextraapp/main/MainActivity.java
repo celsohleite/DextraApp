@@ -19,7 +19,6 @@ import java.util.List;
 
 import br.com.dextra.dextraapp.R;
 import br.com.dextra.dextraapp.model.CardapioModel;
-import br.com.dextra.dextraapp.model.LancheModel;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, MainView<MainPresenter.ErrorType, MainPresenter.ActionsType> {
