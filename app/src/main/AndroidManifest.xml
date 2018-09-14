@@ -24,8 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".pedido.PedidoActivity" />
-        <activity android:name=".promocao.PromocaoActivity"></activity>
+        <activity android:name=".pedido.PedidoActivity"
+            android:label="@string/toolbar_pedido"/>
+        <activity android:name=".promocao.PromocaoActivity" />
+        <activity android:name=".meulanche.MeuLancheActivity" />
+        <activity android:name=".pagamento.PagamentoActivity"></activity>
     </application>
 
 </manifest>

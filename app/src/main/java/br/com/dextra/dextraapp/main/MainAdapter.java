@@ -2,6 +2,7 @@ package br.com.dextra.dextraapp.main;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
@@ -10,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,6 +25,7 @@ import java.util.List;
 
 import br.com.dextra.dextraapp.R;
 import br.com.dextra.dextraapp.model.CardapioModel;
+import br.com.dextra.dextraapp.pedido.PedidoActivity;
 
 /**
  * Created by leite on 11/09/2018.
@@ -55,6 +58,7 @@ public class MainAdapter extends BaseAdapter {
             holder.tv_titleLanche = convertView.findViewById(R.id.txtv_title_lanche);
             holder.tv_descricaoIgredientes= convertView.findViewById(R.id.txtv_descricao_lanche);
             holder.tv_valorLanche = convertView.findViewById(R.id.txtv_valor_lanche);
+            holder.btn_addLanche = convertView.findViewById(R.id.btn_addLanche);
 
             convertView.setTag(holder);
 
@@ -78,6 +82,14 @@ public class MainAdapter extends BaseAdapter {
             holder.tv_valorLanche.setTextSize(20);
             holder.tv_valorLanche.setTypeface(null, Typeface.BOLD);
             holder.tv_valorLanche.setText(String.valueOf(numberFormat.format(itemCardapio.getPreco())));
+            holder.btn_addLanche.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(), PedidoActivity.class);
+                    v.getContext().startActivity(intent);
+                }
+            });
+
         }catch (Exception e){
             Log.i(TAG, "[ EXCEPTION ]"+ e);
         }
@@ -108,6 +120,7 @@ public class MainAdapter extends BaseAdapter {
         TextView tv_titleLanche;
         TextView tv_descricaoIgredientes;
         TextView tv_valorLanche;
+        Button btn_addLanche;
     }
 
 }

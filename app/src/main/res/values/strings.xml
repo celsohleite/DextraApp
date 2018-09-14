@@ -1,8 +1,11 @@
 <resources>
-    <string name="app_name">Dextra App</string>
+    <string name="app_name">Aplicativo Dextra</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Abrir Menu</string>
+    <string name="navigation_drawer_close">Fecha Menu</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Configurações</string>
+    <string name="btn_add_lanche">adicionar lanche</string>
+    <string name="toolbar_pedido">Lanches - Pedidos</string>
+    <string name="toolbar_empresa">Dextra</string>
 </resources>
